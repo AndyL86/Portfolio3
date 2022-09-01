@@ -9,3 +9,7 @@ def getRandomWord():
     words = wordFile.readlines()
     wordFile.close()
     return words[randint(0, len(words)-1)][0:-1]
+
+def menu_logo():
+    print("Hangman'86")
+    
