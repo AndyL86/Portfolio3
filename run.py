@@ -56,4 +56,49 @@ def set_difficulty():
             print("\n Please select 1, 2 or 3 to make your choice")
 
 def play():
+    """
+    Play the game. Incorrect guesses draw out the hangman until the image is complete and it is game over.
+    """
+    word = getRandomWord()
+    progress = ''
+    for i in range(len(word)):
+        progress += '_'
+    incorrect = 0
+    guesses = []
+    while True:
+        _ = system('clear')
+        guessesString = ''
+        for i in range(len(guesses)):
+            if i != len(guesses) and i != 0:
+                guessesString +=', '
+            guessesString += guesses[i]
+        print(drawMan(incorrect))
+        print(f'Letters used: {guessesString}')
+        if progress == word:
+            print(progress)
+            print(user_wins())
+            break
+        if incorrect >= 8:
+            print(user_loses())
+            print(f'The word was {word}.')
+            break
 
+def drawMan(incorrect):
+    """
+    Draws hangman gallow and stick figure in increments up to 7 until a complete hangman is drawn 
+    """
+
+def user_wins():
+    """
+    You Win! logo displayed when player wins game
+    """
+
+def user_loses():
+    """
+    Game Over! logo displayed when player loses game
+    """
+
+def main():
+    """
+    Runs the game
+    """
