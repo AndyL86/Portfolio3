@@ -1,20 +1,26 @@
 from random import randint
 from os import system
 
-def getRandomWord():
-    """
-    Picks a random word to be used for the players guess from the answers.txt file
-    """
-    wordFile = open('answers.txt', 'r')
-    words = wordFile.readlines()
-    wordFile.close()
-    return words[randint(0, len(words)-1)][0:-1]
 
 def menu_logo():
     """
     Main menu logo and game initialisation 
     """
-    print("Hangman'86")
+    print("""
+        
+ /$$   /$$                                                                /$$ /$$$$$$   /$$$$$$ 
+| $$  | $$                                                               | $//$$__  $$ /$$__  $$
+| $$  | $$  /$$$$$$  /$$$$$$$   /$$$$$$  /$$$$$$/$$$$   /$$$$$$  /$$$$$$$|_/| $$  \ $$| $$  \__/
+| $$$$$$$$ |____  $$| $$__  $$ /$$__  $$| $$_  $$_  $$ |____  $$| $$__  $$  |  $$$$$$/| $$$$$$$ 
+| $$__  $$  /$$$$$$$| $$  \ $$| $$  \ $$| $$ \ $$ \ $$  /$$$$$$$| $$  \ $$   >$$__  $$| $$__  $$
+| $$  | $$ /$$__  $$| $$  | $$| $$  | $$| $$ | $$ | $$ /$$__  $$| $$  | $$  | $$  \ $$| $$  \ $$
+| $$  | $$|  $$$$$$$| $$  | $$|  $$$$$$$| $$ | $$ | $$|  $$$$$$$| $$  | $$  |  $$$$$$/|  $$$$$$/
+|__/  |__/ \_______/|__/  |__/ \____  $$|__/ |__/ |__/ \_______/|__/  |__/   \______/  \______/ 
+                               /$$  \ $$                                                        
+                              |  $$$$$$/                                                        
+                               \______/                                                         
+
+        """)
     print('Would you like to play hangman?  (yes/no)')
     answer = input()
     if answer.lower() == 'yes':
@@ -55,6 +61,15 @@ def set_difficulty():
             return letter_count
         else:
             print("\n Please select 1, 2 or 3 to make your choice")
+
+def getRandomWord():
+    """
+    Picks a random word to be used for the players guess from the answers.txt file
+    """
+    wordFile = open('answers.txt', 'r')
+    words = wordFile.readlines()
+    wordFile.close()
+    return words[randint(0, len(words)-1)][0:-1]
 
 def play():
     """
