@@ -146,3 +146,16 @@ def user_loses():
     """
     print('You Lose!')
 
+def main():
+    """
+    Runs the game
+    """
+    print(drawMan(0))
+    menu_logo()
+    set_difficulty()
+
+    game_word = getRandomWord()
+    play()
+
+
+main()
