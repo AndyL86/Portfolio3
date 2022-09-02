@@ -103,6 +103,26 @@ def drawMan(incorrect):
     """
     Draws hangman gallow and stick figure in increments up to 7 until a complete hangman is drawn 
     """
+    if incorrect == 0:
+        return """
+
+
+
+
+
+        
+        """
+    if incorrect == 1:
+        return """
+        |
+        |
+        |
+        |
+        |
+        ========
+        """
+    
+    
 
 def user_wins():
     """
