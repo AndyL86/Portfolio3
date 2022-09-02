@@ -302,8 +302,7 @@ def main():
     print(drawMan(0))
     menu_logo()
     set_difficulty()
-
-    game_word = getRandomWord()
+    getRandomWord()
     play()
 
 
