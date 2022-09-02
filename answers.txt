@@ -162,7 +162,7 @@ bump
 bungalow
 bunghole
 burial
-burn-out
+burnout
 business
 bust
 butler
@@ -422,7 +422,6 @@ elephant
 elevator
 eleventh
 elicit
-e-mail
 emergent
 emission
 emphasis
@@ -441,7 +440,6 @@ ephemera
 ephyra
 equality
 equation
-e-reader
 erection
 escape
 espalier
@@ -556,12 +554,10 @@ glut
 goat
 goldfish
 gong
-good-bye
 goodie
 goodness
 goodwill
 governor
-grab-bag
 gradient
 graduate
 graffiti
@@ -585,7 +581,6 @@ handicap
 handover
 handrail
 hanger
-hard-hat
 hardship
 hardware
 harm
@@ -863,7 +858,6 @@ octave
 odometer
 offering
 official
-off-ramp
 offset
 oleo
 omission
@@ -1189,11 +1183,9 @@ standoff
 star
 statin
 step
-step-son
 stereo
 stiletto
 stimulus
-stir-fry
 stitcher
 stopsign
 stot

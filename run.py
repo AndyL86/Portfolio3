@@ -226,15 +226,37 @@ def drawMan(incorrect):
 
 def user_wins():
     """
-    You Win! logo displayed when player wins game
+    You Won logo displayed when player wins game
     """
-    print('You Win!')
+    print("""
+
+ _     _  _____  _   _     _       _  _____  _   _ 
+( )   ( )(  _  )( ) ( )   ( )  _  ( )(  _  )( ) ( )
+`\`\_/'/'| ( ) || | | |   | | ( ) | || ( ) || `\| |
+  `\ /'  | | | || | | |   | | | | | || | | || , ` |
+   | |   | (_) || (_) |   | (_/ \_) || (_) || |`\ |
+   (_)   (_____)(_____)   `\___x___/'(_____)(_) (_)
+                                                   
+                                                   
+   
+""")
 
 def user_loses():
     """
-    You Lose! logo displayed when player loses game
+    You Lost logo displayed when player loses game
     """
-    print('You Lose!')
+    print("""
+
+ _     _  _____  _   _     _      _____  ___   _____ 
+( )   ( )(  _  )( ) ( )   ( )    (  _  )(  _`\(_   _)
+`\`\_/'/'| ( ) || | | |   | |    | ( ) || (_(_) | |  
+  `\ /'  | | | || | | |   | |  _ | | | |`\__ \  | |  
+   | |   | (_) || (_) |   | |_( )| (_) |( )_) | | |  
+   (_)   (_____)(_____)   (____/'(_____)`\____) (_)  
+                                                     
+                                                     
+
+    """)
 
 def main():
     """
