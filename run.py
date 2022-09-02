@@ -121,6 +121,16 @@ def drawMan(incorrect):
         |
         ========
         """
+    if incorrect == 2:
+        return """
+        |/
+        |
+        |
+        |
+        |
+        |\\
+        ========
+        """
     
     
 
@@ -128,13 +138,11 @@ def user_wins():
     """
     You Win! logo displayed when player wins game
     """
+    print('You Win!')
 
 def user_loses():
     """
-    Game Over! logo displayed when player loses game
+    You Lose! logo displayed when player loses game
     """
+    print('You Lose!')
 
-def main():
-    """
-    Runs the game
-    """
