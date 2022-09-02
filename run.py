@@ -24,6 +24,7 @@ def menu_logo():
     print('Would you like to play hangman?  (yes/no)')
     answer = input()
     if answer.lower() == 'yes':
+        rules()
         set_difficulty()
         play()
     if answer.lower() == 'no':
@@ -38,6 +39,42 @@ def menu_logo():
                                                ''              
 
             """)
+
+def rules():
+    """
+    Displays the rules of the game before the game starts
+    """
+    print("""
+    
+
+  ____        _           
+ |  _ \ _   _| | ___  ___ 
+ | |_) | | | | |/ _ \/ __|
+ |  _ <| |_| | |  __/\__ \\
+ |_| \_\\__,_|_|\___||___/
+                          
+                                  
+
+    Choose a letter and press enter to play your guess.
+    If your guess is incorrect, the hangman gallows will build up. You have 8 guesses.
+    If your guess is correct, the letter will be displayed in its relevant position in the word.
+    """)
+    print('Type yes to continue or no to end the game (yes/no)')
+    answer = input()
+    if answer.lower() == 'yes':
+        set_difficulty()
+        play()
+    if answer.lower() == 'no':
+        print("""
+        
+ ..|'''.|                       '||  '||                       
+.|'     '    ...     ...      .. ||   || ...  .... ...   ....  
+||    .... .|  '|. .|  '|.  .'  '||   ||'  ||  '|.  |  .|...|| 
+'|.    ||  ||   || ||   ||  |.   ||   ||    |   '|.|   ||      
+ ''|...'|   '|..|'  '|..|'  '|..'||.  '|...'     '|     '|...' 
+                                              .. |             
+                                               ''              
+        """)
 
 def set_difficulty():
     """
