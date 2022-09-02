@@ -57,23 +57,23 @@ def set_difficulty():
 
 def play():
     """
-    Play the game. Incorrect guesses draw out the hangman until the image is complete and it is game over.
+    Play the game. Incorrect letters draw out the hangman until the image is complete and it is game over.
     """
     word = getRandomWord()
     progress = ''
     for i in range(len(word)):
         progress += '_'
     incorrect = 0
-    guesses = []
+    letters = []
     while True:
         _ = system('clear')
-        guessesString = ''
-        for i in range(len(guesses)):
-            if i != len(guesses) and i != 0:
-                guessesString +=', '
-            guessesString += guesses[i]
+        lettersString = ''
+        for i in range(len(letters)):
+            if i != len(letters) and i != 0:
+                lettersString +=', '
+            lettersString += letters[i]
         print(drawMan(incorrect))
-        print(f'Letters used: {guessesString}')
+        print(f'Letters used: {lettersString}')
         if progress == word:
             print(progress)
             print(user_wins())
@@ -82,6 +82,22 @@ def play():
             print(user_loses())
             print(f'The word was {word}.')
             break
+        print(progress)
+        print('Guess a letter!')
+        print(f'Nmber of incorrect guesses {incorrect}')
+        userInput = input()
+        if userInput not in letters:
+            letters.append(userInput)
+        if userInput in word:
+            print(f'The letter {userInput} is in the word.')
+            for i in range(len(word)):
+                if userInput == word[i]:
+                    progressStart = progress[0:i]
+                    progressEnd = progress[i+1:]
+                    progress = progressStart + userInput + progressEnd
+        else:
+            print(f'The letter {userInput} is not in the word. Try Again.')
+            incorrect += 1
 
 def drawMan(incorrect):
     """
