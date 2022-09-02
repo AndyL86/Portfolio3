@@ -15,6 +15,7 @@ def menu_logo():
     Main menu logo and game initialisation 
     """
     print("Hangman'86")
+    print('Would you like to play hangman?  (yes/no)')
     answer = input()
     if answer.lower() == 'yes':
         set_difficulty()
