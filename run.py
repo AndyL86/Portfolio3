@@ -147,7 +147,7 @@ def play():
             break
         print(progress)
         print('Guess a letter!')
-        print(f'Nmber of incorrect guesses {incorrect}')
+        print(f'Number of incorrect guesses {incorrect}')
         userInput = input()
         if userInput not in letters:
             letters.append(userInput)
