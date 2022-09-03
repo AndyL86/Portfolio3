@@ -164,7 +164,7 @@ def play():
 
 def drawMan(incorrect):
     """
-    Draws hangman gallow and stick figure in increments up to 7 until a complete hangman is drawn 
+    Draws hangman gallow and stick figure in increments up to 8 until a complete hangman is drawn 
     """
     if incorrect == 0:
         return """
