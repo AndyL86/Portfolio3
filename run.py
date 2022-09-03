@@ -56,8 +56,8 @@ def rules():
                                   
 
     Choose a letter and press enter to play your guess.
-    If your guess is incorrect, the hangman gallows will build up. You have 8 guesses.
     If your guess is correct, the letter will be displayed in its relevant position in the word.
+    If your guess is incorrect, the hangman gallows will build up. You have 8 guesses.
     """)
     print('Type yes to continue or no to end the game (yes/no)')
     answer = input()
@@ -81,7 +81,7 @@ def set_difficulty():
     Asks player to set difficulty
     """
     print("\n")
-    print(" Select your difficult level\n")
+    print(" Select your difficulty level\n")
     print(
         " Press 1 for Level 1, 4 letter word"
         )
