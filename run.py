@@ -21,14 +21,14 @@ def menu_logo():
                                \______/                                                         
 
         """)
-    print('Would you like to play hangman?  (yes/no)')
-    answer = input()
-    if answer.lower() == 'yes':
-        rules()
-        set_difficulty()
-        play()
-    if answer.lower() == 'no':
-        print("""
+    print('Would you like to play hangman?  (y)es or (n)o')
+    while True:
+        answer = input()
+        if answer.lower() == 'y':
+            rules()
+            break
+        elif answer.lower() == 'n':
+            print("""
             
  ..|'''.|                       '||  '||                       
 .|'     '    ...     ...      .. ||   || ...  .... ...   ....  
@@ -39,6 +39,9 @@ def menu_logo():
                                                ''              
 
             """)
+            break
+        else:
+            print("Please enter a valid option")
 
 def rules():
     """
@@ -61,9 +64,6 @@ def rules():
     """)
     print('Type yes to continue or no to end the game (yes/no)')
     answer = input()
-    if answer.lower() == 'yes':
-        set_difficulty()
-        play()
     if answer.lower() == 'no':
         print("""
         
@@ -89,7 +89,7 @@ def set_difficulty():
         " Press 2 for Level 2, 6 letter word"
         )
     print(
-        " Press 3 for Level 3, 8 letter"
+        " Press 3 for Level 3, 8 letter word"
         )
     difficulty = False
     while not difficulty:
@@ -129,7 +129,6 @@ def play():
     incorrect = 0
     letters = []
     while True:
-        _ = system('clear')
         lettersString = ''
         for i in range(len(letters)):
             if i != len(letters) and i != 0:
@@ -140,10 +139,12 @@ def play():
         if progress == word:
             print(progress)
             print(user_wins())
+            restart_game()
             break
         if incorrect >= 8:
             print(user_loses())
             print(f'The word was {word}.')
+            restart_game()
             break
         print(progress)
         print('Guess a letter!')
@@ -161,6 +162,24 @@ def play():
         else:
             print(f'The letter {userInput} is not in the word. Try Again.')
             incorrect += 1
+
+def restart_game():
+    while True:
+        choice = input("Would you like to play again?  (y)es or (n)o")
+        if choice == "y":
+            main(False)
+        else:
+            ("""
+        
+ ..|'''.|                       '||  '||                       
+.|'     '    ...     ...      .. ||   || ...  .... ...   ....  
+||    .... .|  '|. .|  '|.  .'  '||   ||'  ||  '|.  |  .|...|| 
+'|.    ||  ||   || ||   ||  |.   ||   ||    |   '|.|   ||      
+ ''|...'|   '|..|'  '|..|'  '|..'||.  '|...'     '|     '|...' 
+                                              .. |             
+                                               ''              
+        """)
+        exit()
 
 def drawMan(incorrect):
     """
@@ -295,15 +314,17 @@ def user_loses():
 
     """)
 
-def main():
+def main(first_run):
     """
     Runs the game
     """
-    print(drawMan(0))
-    menu_logo()
-    set_difficulty()
+    if first_run:
+        print(drawMan(0))
+        menu_logo()
+
+    letter_count = set_difficulty()
     getRandomWord()
     play()
 
 
-main()
+main(True)
