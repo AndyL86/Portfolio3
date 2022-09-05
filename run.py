@@ -165,7 +165,7 @@ def play():
 
 def restart_game():
     while True:
-        choice = input("Would you like to play again?  (y)es or (n)o")
+        choice = input("Would you like to play again?  (y)es or (n)o:\n")
         if choice == "y":
             main(False)
         else:
