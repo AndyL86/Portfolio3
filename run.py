@@ -60,10 +60,14 @@ def rules():
     If your guess is correct, the letter will be displayed in its relevant position in the word.
     If your guess is incorrect, the hangman gallows will build up. You have 8 guesses.
     """)
-    print('Type yes to continue or no to end the game (yes/no)')
-    answer = input()
-    if answer.lower() == 'no':
-        print("""
+    print('Do you want to continue?  (y)es or (n)o:')
+    while True:
+        answer = input()
+        if answer.lower() == 'y':
+            set_difficulty()
+            break
+        elif answer.lower() == 'n':
+            print("""
         
  ..|'''.|                       '||  '||                       
 .|'     '    ...     ...      .. ||   || ...  .... ...   ....  
@@ -73,6 +77,9 @@ def rules():
                                               .. |             
                                                ''              
         """)
+            break
+        else:
+            print("Please enter a valid option")
 
 def set_difficulty():
     """
