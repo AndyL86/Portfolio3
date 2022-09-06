@@ -27,3 +27,11 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
  * As a user, I want the game to be easy and fun to play.
  * As a user, I want clearly readable instructions on how the game works.
  * As a user, I want the game to provide a level of challenge without being too difficult.
+
+ ## **Features**
+
+ ### **Existing Features**
+* Game Menu
+  * Can select to start game to progress to rules menu
+* Rules Menu
+* Set Difficulty
