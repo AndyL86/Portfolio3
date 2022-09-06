@@ -112,14 +112,20 @@ def set_difficulty():
             difficulty = True
             letter_count = 4
             return letter_count
+            play()
+            break
         elif options == "2":
             difficulty = True
             letter_count = 6
             return letter_count
+            play()
+            break
         elif options == "3":
             difficulty = True
             letter_count = 8
             return letter_count
+            play()
+            break
         else:
             print("\n Please select 1, 2 or 3 to make your choice")
 
@@ -306,9 +312,7 @@ def user_wins():
   `\ /'  | | | || | | |   | | | | | || | | || , ` |
    | |   | (_) || (_) |   | (_/ \_) || (_) || |`\ |
    (_)   (_____)(_____)   `\___x___/'(_____)(_) (_)
-                                                   
-                                                   
-   
+                                                                                               
 """)
 
 def user_loses():
@@ -322,10 +326,7 @@ def user_loses():
 `\`\_/'/'| ( ) || | | |   | |    | ( ) || (_(_) | |  
   `\ /'  | | | || | | |   | |  _ | | | |`\__ \  | |  
    | |   | (_) || (_) |   | |_( )| (_) |( )_) | | |  
-   (_)   (_____)(_____)   (____/'(_____)`\____) (_)  
-                                                     
-                                                     
-
+   (_)   (_____)(_____)   (____/'(_____)`\____) (_)                                                                                           
     """)
 
 def main(first_run):
@@ -336,7 +337,6 @@ def main(first_run):
         print(drawMan(0))
         menu_logo()
 
-    letter_count = set_difficulty()
     getRandomWord()
     play()
 
