@@ -66,8 +66,10 @@ def rules():
                                   
 
     Choose a letter and press enter to play your guess.
-    If your guess is correct, the letter will be displayed in its relevant position in the word.
-    If your guess is incorrect, the hangman gallows will build up. You have 8 guesses.
+    If your guess is correct, the letter will be displayed in its
+    relevant position in the word.
+    If your guess is incorrect, the hangman gallows will build up.
+    You have 8 guesses.
     """)
     print('Do you want to continue?  (y)es or (n)o:')
     while True:

@@ -33,5 +33,24 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
  ### **Existing Features**
 * Game Menu
   * Can select to start game to progress to rules menu
+
+![Main menu](docs/read-me/main-menu.png)
+
 * Rules Menu
+  * Can confirm to continue to set difficulty menu or exit the game
+
+![Rules menu](docs/read-me/rules-menu.png)
+
 * Set Difficulty
+  * Level 1 = 4 letter word
+  * Level 2 = 6 letter word
+  * Level 3 = 8 letter word
+
+![Set difficulty menu](docs/read-me/set-difficulty.png)
+
+ * Random word generations
+   * A function randomly generates a word from a list of 1382 words ranging from 4, 6 and 8 letters.
+
+![Random word](docs/read-me/first-guess.png)
+
+
