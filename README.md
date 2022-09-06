@@ -1,31 +1,29 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Hangman'86**
+Hangman'86 is a Python terminal game in which players can try to guess a randomly generated word by inputting letters, this runs on the Code Institute mock terminal on Heroku. The game is over when the player either guesses the word correctly or the maximum number of incorrect guesses has been reached and the hangman gallows image is completed. The target audience is developers working in the IDE who enjoy playing straight forward games in their downtime or fellow beginner coders looking for inspiration for their next challenge. 
 
-Welcome AndyL86,
+[Hangman'86](https://hangman-86.herokuapp.com/) - The live site can be viewed here. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+![Am I Responsive?](docs/read-me/responsive.png) 
 
-## Reminders
+## **Table of Contents**
+ * [**How to Play**](#how-to-play)
+ * [**Planning Stage**](#planning-stage)
+ * [**Features**](#features)
+ * [**Testing**](#testing)
+ * [**Technologies Used**](#technologies-used)
+ * [**Bugs**](#bugs)
+ * [**Validators**](#validators)
+ * [**Deployment**](#deployment)
+ * [**Credits**](#credits)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## **How to Play**
+The game starts by prompting players to select a difficulty level which generates a random word of 4, 6 or 8 letters depending on the level chosen. Once the level has been selected the game initialises and players are prompted to input a letter in the terminal and press enter to play their guess. The goal of the game is to guess the hidden word, represented by _ _ _ _ relevant to the difficulty level chosen. Level 1 generates a 4 letter word, Level 2 a 6 letter word and Level 3 an 8 letter word. 
+An error message is displayed if a player enters an incorrect command and is asked to resubmit a new guess. If the letter guessed is correct, the _ is replaced by the chosen letter in its relevant position in the word until all the letters are revealed and the game is over. If the letter guessed is incorrect a piece of the Hangman gallows is added to the terminal, players have a maximum of 8 incorrect guesses before the gallows is completed and the game is over.
 
-## Creating the Heroku app
+## **Planning Stage**
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+### **User Experience UX**
+To build a terminal version of Hangman for a developer to use in an IDE environment whilst taking a break from coding.
+ * As a user, I want the game to be easy and fun to play.
+ * As a user, I want clearly readable instructions on how the game works.
+ * As a user, I want the game to provide a level of challenge without being too difficult.
