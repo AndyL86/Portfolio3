@@ -18,6 +18,16 @@ def menu_logo():
                     (_____|                                 
                                                         
 
+        ___________
+        |/        |
+        |         O
+        |        /|\\
+        |         |
+        |        / \\
+        |\\
+        ========
+    
+
         """)
     print('Would you like to play hangman?  (y)es or (n)o')
     while True:
