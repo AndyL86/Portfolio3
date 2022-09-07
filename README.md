@@ -60,6 +60,19 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Ammount of incorrect guesses](docs/read-me/gameplay.png)
 
+* Win and Lose screens
+ * A graphic is displayed to declare the player has won or lost the game. 
+ * Users can choose whether to restart the game or exit the game.
+
+![You Won!] 
+
+![You Lost!] 
+
+* Invalid inputs
+  * For all user inputs, checks are run to ensure there are no invalid inputs submitted.
+  * For any invalid submissions, a tailored error message is displayed and the user is prompted to input their selection again.
+
+![Invalid input] 
 
 
 
