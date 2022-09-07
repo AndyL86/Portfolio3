@@ -4,19 +4,16 @@ from os import system
 
 def menu_logo():
     """
-    Main menu logo and game initialisation 
+    Main menu logo and game initialisation
     """
     print("""
-        
- _     _                                   _  _____     __  
-| |   | |                                 ( )/ ___ \   / /  
-| |__ | | ____ ____   ____ ____   ____ ___|/( (   ) ) / /_  
-|  __)| |/ _  |  _ \ / _  |    \ / _  |  _ \ > > < < / __ \ 
+ _     _                                   _  _____     __
+| |   | |                                 ( )/ ___ \   / /
+| |__ | | ____ ____   ____ ____   ____ ___|/( (   ) ) / /_
+|  __)| |/ _  |  _ \ / _  |    \ / _  |  _ \ > > < < / __ \\
 | |   | ( ( | | | | ( ( | | | | ( ( | | | | ( (___) | (__) )
-|_|   |_|\_||_|_| |_|\_|| |_|_|_|\_||_|_| |_|\_____/ \____/ 
-                    (_____|                                 
-                                                        
-
+|_|   |_|\_||_|_| |_|\_|| |_|_|_|\_||_|_| |_|\_____/ \____/
+                    (_____|
         ___________
         |/        |
         |         O
@@ -25,8 +22,6 @@ def menu_logo():
         |        / \\
         |\\
         ========
-    
-
         """)
     print('Would you like to play hangman?  (y)es or (n)o')
     while True:
@@ -36,35 +31,29 @@ def menu_logo():
             break
         elif answer.lower() == 'n':
             print("""
-            
- ..|'''.|                       '||  '||                       
-.|'     '    ...     ...      .. ||   || ...  .... ...   ....  
-||    .... .|  '|. .|  '|.  .'  '||   ||'  ||  '|.  |  .|...|| 
-'|.    ||  ||   || ||   ||  |.   ||   ||    |   '|.|   ||      
- ''|...'|   '|..|'  '|..|'  '|..'||.  '|...'     '|     '|...' 
-                                              .. |             
-                                               ''              
-
+ ..|'''.|                       '||  '||
+.|'     '    ...     ...      .. ||   || ...  .... ...   ....
+||    .... .|  '|. .|  '|.  .'  '||   ||'  ||  '|.  |  .|...||
+'|.    ||  ||   || ||   ||  |.   ||   ||    |   '|.|   ||
+ ''|...'|   '|..|'  '|..|'  '|..'||.  '|...'     '|     '|...'
+                                              .. |
+                                               ''
             """)
             break
         else:
             print("Please enter a valid option")
+
 
 def rules():
     """
     Displays the rules of the game before the game starts
     """
     print("""
-    
-
-  ____        _           
- |  _ \ _   _| | ___  ___ 
+  ____        _
+ |  _ \ _   _| | ___  ___
  | |_) | | | | |/ _ \/ __|
  |  _ <| |_| | |  __/\__ \\
  |_| \_\\__,_|_|\___||___/
-                          
-                                  
-
     Choose a letter and press enter to play your guess.
     If your guess is correct, the letter will be displayed in its
     relevant position in the word.
@@ -79,18 +68,18 @@ def rules():
             break
         elif answer.lower() == 'n':
             print("""
-        
- ..|'''.|                       '||  '||                       
-.|'     '    ...     ...      .. ||   || ...  .... ...   ....  
-||    .... .|  '|. .|  '|.  .'  '||   ||'  ||  '|.  |  .|...|| 
-'|.    ||  ||   || ||   ||  |.   ||   ||    |   '|.|   ||      
- ''|...'|   '|..|'  '|..|'  '|..'||.  '|...'     '|     '|...' 
-                                              .. |             
-                                               ''              
+ ..|'''.|                       '||  '||
+.|'     '    ...     ...      .. ||   || ...  .... ...   ....
+||    .... .|  '|. .|  '|.  .'  '||   ||'  ||  '|.  |  .|...||
+'|.    ||  ||   || ||   ||  |.   ||   ||    |   '|.|   ||
+ ''|...'|   '|..|'  '|..|'  '|..'||.  '|...'     '|     '|...'
+                                              .. |
+                                               ''
         """)
             break
         else:
             print("Please enter a valid option")
+
 
 def set_difficulty():
     """
@@ -131,18 +120,22 @@ def set_difficulty():
         else:
             print("\n Please select 1, 2 or 3 to make your choice")
 
+
 def getRandomWord():
     """
-    Picks a random word to be used for the players guess from the answers.txt file
+    Picks a random word to be used for the players guess from the
+    answers.txt file
     """
     wordFile = open('answers.txt', 'r')
     words = wordFile.readlines()
     wordFile.close()
     return words[randint(0, len(words)-1)][0:-1]
 
+
 def play():
     """
-    Play the game. Incorrect letters draw out the hangman until the image is complete and it is game over.
+    Play the game. Incorrect letters draw out the hangman
+    until the image is complete and it is game over.
     """
     word = getRandomWord()
     progress = ''
@@ -154,7 +147,7 @@ def play():
         lettersString = ''
         for i in range(len(letters)):
             if i != len(letters) and i != 0:
-                lettersString +=', '
+                lettersString += ', '
             lettersString += letters[i]
         print(drawMan(incorrect))
         print(f'Letters used: {lettersString}')
@@ -185,6 +178,7 @@ def play():
             print(f'The letter {userInput} is not in the word. Try Again.')
             incorrect += 1
 
+
 def restart_game():
     while True:
         choice = input("Would you like to play again?  (y)es or (n)o:\n")
@@ -192,20 +186,21 @@ def restart_game():
             main(False)
         else:
             ("""
-        
- ..|'''.|                       '||  '||                       
-.|'     '    ...     ...      .. ||   || ...  .... ...   ....  
-||    .... .|  '|. .|  '|.  .'  '||   ||'  ||  '|.  |  .|...|| 
-'|.    ||  ||   || ||   ||  |.   ||   ||    |   '|.|   ||      
- ''|...'|   '|..|'  '|..|'  '|..'||.  '|...'     '|     '|...' 
-                                              .. |             
-                                               ''              
+ ..|'''.|                       '||  '||
+.|'     '    ...     ...      .. ||   || ...  .... ...   ....
+||    .... .|  '|. .|  '|.  .'  '||   ||'  ||  '|.  |  .|...||
+'|.    ||  ||   || ||   ||  |.   ||   ||    |   '|.|   ||
+ ''|...'|   '|..|'  '|..|'  '|..'||.  '|...'     '|     '|...'
+                                              .. |
+                                               ''
         """)
         exit()
 
+
 def drawMan(incorrect):
     """
-    Draws hangman gallow and stick figure in increments up to 8 until a complete hangman is drawn 
+    Draws hangman gallow and stick figure in increments
+    up to 8 until a complete hangman is drawn
     """
     if incorrect == 0:
         return """
@@ -214,7 +209,7 @@ def drawMan(incorrect):
 
 
 
-        
+
         """
     if incorrect == 1:
         return """
@@ -250,7 +245,7 @@ def drawMan(incorrect):
         return """
         __________
         |/        |
-        |         
+        |
         |
         |
         |
@@ -300,22 +295,22 @@ def drawMan(incorrect):
         |        / \\
         |\\
         ========
-        """    
+        """
+
 
 def user_wins():
     """
     You Won logo displayed when player wins game
     """
     print("""
-
- _     _  _____  _   _     _       _  _____  _   _ 
+ _     _  _____  _   _     _       _  _____  _   _
 ( )   ( )(  _  )( ) ( )   ( )  _  ( )(  _  )( ) ( )
 `\`\_/'/'| ( ) || | | |   | | ( ) | || ( ) || `\| |
   `\ /'  | | | || | | |   | | | | | || | | || , ` |
    | |   | (_) || (_) |   | (_/ \_) || (_) || |`\ |
    (_)   (_____)(_____)   `\___x___/'(_____)(_) (_)
-                                                                                               
 """)
+
 
 def user_loses():
     """
@@ -323,13 +318,14 @@ def user_loses():
     """
     print("""
 
- _     _  _____  _   _     _      _____  ___   _____ 
+ _     _  _____  _   _     _      _____  ___   _____
 ( )   ( )(  _  )( ) ( )   ( )    (  _  )(  _`\(_   _)
-`\`\_/'/'| ( ) || | | |   | |    | ( ) || (_(_) | |  
-  `\ /'  | | | || | | |   | |  _ | | | |`\__ \  | |  
-   | |   | (_) || (_) |   | |_( )| (_) |( )_) | | |  
-   (_)   (_____)(_____)   (____/'(_____)`\____) (_)                                                                                           
+`\`\_/'/'| ( ) || | | |   | |    | ( ) || (_(_) | |
+  `\ /'  | | | || | | |   | |  _ | | | |`\__ \  | |
+   | |   | (_) || (_) |   | |_( )| (_) |( )_) | | |
+   (_)   (_____)(_____)   (____/'(_____)`\____) (_)
     """)
+
 
 def main(first_run):
     """

@@ -76,20 +76,32 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ### **Features Left to Implement**
 * Add a scoring system and leaderboard so players can keep track of their winning streaks.
-* Add a countdown timer which vaires depending on the difficulty level selected, the harder the level the shorter the countdown timer.
+* Add a countdown timer which varies depending on the difficulty level selected, the harder the level the shorter the countdown timer.
 * Allow players to guess a whole word if they think they know the answer, if guessed incorrectly the player loses despite number of guesses that are left.
 
 ## **Testing**
+* I conducted manual testing through the use of a PEP8 Linter (http://pep8online.com/) and corrected any errors that were identified.
+* Error message prompts were checked through the use of variants of incorrect user inputs
+* Tests were conducted in the local terminal as well as on the deployed site via the mock terminal on Heroku.
 
 ## **Technology Used**
+* Languages
+  * Python
+* Libraries
+  * randint to select a random word.
+* Other
+  * answers.txt - File containing a list of randomly selected 4,6 and 8 letter words, sourced from (http://www.desiquintans.com/nounlist)
 
 ## **Bugs**
 
 ### **Fixed Bugs**
-
+* Bug - Set difficulty menu looping once after initial level selection
+  * Fix - Removed unnecessary level_select = set_difficulty() function call 
 ### **Unfixed Bugs**
 
 ## **Validators**
+* PEP8
+  * No errors were returned from (http://pep8online.com/).
 
 ## **Deployment**
 
