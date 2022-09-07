@@ -104,7 +104,15 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
   * No errors were returned from (http://pep8online.com/).
 
 ## **Deployment**
+The project was deployed using Code Institutes mock terminal for Heroku. 
+
+* Steps to deploy:
+  * 
 
 ## **Credits**
+ * [Code Institute](https://codeinstitute.net/)
+ * [Random Word Generator](http://www.desiquintans.com/nounlist)
+ * [Python Hang Man tutorial](https://www.youtube.com/watch?v=TWLD2OKmSCQ)
 
  ### **Acknowledgments**
+* Richard Wells (https://github.com/D0nni387) - Code Institute mentor, without his patience and support I would not have been able to complete my project to a standard that I am happy with
