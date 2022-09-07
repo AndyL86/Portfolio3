@@ -10,7 +10,7 @@ Hangman'86 is a Python terminal game in which players can try to guess a randoml
  * [**Planning Stage**](#planning-stage)
  * [**Features**](#features)
  * [**Testing**](#testing)
- * [**Technologies Used**](#technologies-used)
+ * [**Technology Used**](#technology-used)
  * [**Bugs**](#bugs)
  * [**Validators**](#validators)
  * [**Deployment**](#deployment)
@@ -53,4 +53,32 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Random word](docs/read-me/first-guess.png)
 
+* Incorrect guesses with graphical representation
+   * The user has 8 incorrect guesses before it is game over.
+   * This is visible during gameplay
+   * The hangman gallows is built incrementally with each incorrect guess.
 
+![Ammount of incorrect guesses](docs/read-me/gameplay.png)
+
+
+
+
+### **Features Left to Implement**
+
+## **Testing**
+
+## **Technology Used**
+
+## **Bugs**
+
+### **Fixed Bugs**
+
+### **Unfixed Bugs**
+
+## **Validators**
+
+## **Deployment**
+
+## **Credits**
+
+ ### **Acknowledgments**
