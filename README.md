@@ -74,9 +74,10 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Invalid input] 
 
-
-
 ### **Features Left to Implement**
+* Add a scoring system and leaderboard so players can keep track of their winning streaks.
+* Add a countdown timer which vaires depending on the difficulty level selected, the harder the level the shorter the countdown timer.
+* Allow players to guess a whole word if they think they know the answer, if guessed incorrectly the player loses despite number of guesses that are left.
 
 ## **Testing**
 
