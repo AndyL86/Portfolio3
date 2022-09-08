@@ -100,7 +100,7 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 * Bug - Gameplay starting when user input 'n' to exit game on Rules menu prompt.
   * Fix - Exit() added to if statement in the rules() function.
 * Bug - UserInput print statement not printing to terminal
- * Fix - Removed unecessary clear
+  * Fix - Removed unecessary _ = system('clear') from while loop
 ### **Unfixed Bugs**
 
 ## **Validators**

@@ -185,7 +185,7 @@ def restart_game():
         choice = input("Would you like to play again?  (y)es or (n)o:\n")
         if choice == "y":
             main(False)
-        else:
+        elif choice == "n":
             ("""
  ..|'''.|                       '||  '||
 .|'     '    ...     ...      .. ||   || ...  .... ...   ....
@@ -195,7 +195,10 @@ def restart_game():
                                               .. |
                                                ''
         """)
-        exit()
+            exit()
+        else:
+            print("Please enter a valid option")
+        
 
 
 def drawMan(incorrect):
