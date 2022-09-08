@@ -95,8 +95,12 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 ## **Bugs**
 
 ### **Fixed Bugs**
-* Bug - Set difficulty menu looping once after initial level selection
-  * Fix - Removed unnecessary level_select = set_difficulty() function call 
+* Bug - Set difficulty menu looping once after initial level selection.
+  * Fix - Removed unnecessary level_select = set_difficulty() function call.
+* Bug - Gameplay starting when user input 'n' to exit game on Rules menu prompt.
+  * Fix - Exit() added to if statement in the rules() function.
+* Bug - UserInput print statement not printing to terminal
+ * Fix - Removed unecessary clear
 ### **Unfixed Bugs**
 
 ## **Validators**
