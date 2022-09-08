@@ -32,12 +32,12 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
  ### **Existing Features**
 * Game Menu
-  * Can select to start game to progress to rules menu
+  * Can select to start game to progress to rules menu or exit the game.
 
 ![Main menu](docs/read-me/main-menu.png)
 
 * Rules Menu
-  * Can confirm to continue to set difficulty menu or exit the game
+  * Can confirm to continue to set difficulty menu or exit the game.
 
 ![Rules menu](docs/read-me/rules-menu.png)
 
@@ -113,7 +113,20 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 The project was deployed using Code Institutes mock terminal for Heroku. 
 
 * Steps to deploy:
-  * 
+  * Fork or clone this repository.
+  * Create a new Heroku app by selecting 'New' and then 'Create new app'.
+  * Give the app a name and follow the instructions to continue.
+  * Open the Heroku settings and add two buildpacks in the order as follows:
+    1. heroku/python
+    2. heroku/nodejs
+  * Still in the settings, create a Config Var called PORT, set this to 8000.
+  * If you have credentials you must enter another Config Var called CREDS
+  and paste in the contents of the JSON file.
+  * Click 'Deploy' and choose your preferred deployment method and your 
+  repository.
+  * Click 'connect' on your repository.
+  * Your site will now be deployed on Heroku.
+
 
 ## **Credits**
  * [Code Institute](https://codeinstitute.net/)
