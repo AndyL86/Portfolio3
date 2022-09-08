@@ -181,6 +181,9 @@ def play():
 
 
 def restart_game():
+    """
+    When game ends user to choose to restart the game or exit
+    """
     while True:
         choice = input("Would you like to play again?  (y)es or (n)o:\n")
         if choice == "y":
