@@ -39,7 +39,7 @@ def menu_logo():
                                               .. |
                                                ''
             """)
-            break
+            exit()
         else:
             print("Please enter a valid option")
 
@@ -76,6 +76,7 @@ def rules():
                                               .. |
                                                ''
         """)
+            exit()
             break
         else:
             print("Please enter a valid option")
