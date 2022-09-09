@@ -23,7 +23,7 @@ def menu_logo():
         |\\
         ========
         """)
-    print('Would you like to play hangman?  (y)es or (n)o')
+    print('Would you like to play hangman? (y)es or (n)o')
     while True:
         answer = input()
         if answer.lower() == 'y':
@@ -341,7 +341,8 @@ def main(first_run):
     if first_run:
         print(drawMan(0))
         menu_logo()
-
+    
+    set_difficulty()
     getRandomWord()
     play()
 
