@@ -187,6 +187,7 @@ def restart_game():
     while True:
         choice = input("Would you like to play again?  (y)es or (n)o:\n")
         if choice == "y":
+            set_difficulty()
             main(False)
         elif choice == "n":
             ("""
@@ -342,7 +343,6 @@ def main(first_run):
         print(drawMan(0))
         menu_logo()
     
-    set_difficulty()
     getRandomWord()
     play()
 
