@@ -145,13 +145,13 @@ def play():
     incorrect = 0
     letters = []
     while True:
-        lettersString = ''
+        letterString = ''
         for i in range(len(letters)):
             if i != len(letters) and i != 0:
-                lettersString += ', '
-            lettersString += letters[i]
+                letterString += ', '
+            letterString += letters[i]
         print(drawMan(incorrect))
-        print(f'Letters used: {lettersString}')
+        print(f'Letters used: {letterString}')
         if progress == word:
             print(progress)
             print(user_wins())

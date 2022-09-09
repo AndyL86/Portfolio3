@@ -103,6 +103,12 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
   * Fix - Removed unecessary _ = system('clear') from while loop.
 * Bug - Restart function accepting any letter input for exit game.
   * Fix - Extended if else statement to if elif else for stricter user input.
+* Bug - Restart game y input starting gameplay instead of taking 
+user to set difficulty menu.
+  * Fix - Added set_difficulty() to restart_game() y input code.
+* Bug - Goodbye message not appearing when user inputs n at restart game 
+prompt.
+* Fix - missing print in restart_game().
 ### **Unfixed Bugs**
 
 ## **Validators**
