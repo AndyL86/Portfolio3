@@ -168,6 +168,10 @@ def play():
         userInput = input()
         if userInput not in letters:
             letters.append(userInput)
+            if len(userInput) > 1:
+                raise ValueError(f'You can only guess 1 letter at a time, you guessed')
+            elif not userInput.isalpha():
+                raise ValueError(f'You can only guess letters, you guessed {(userInput)}')
         if userInput in word:
             print(f'The letter {userInput} is in the word.')
             for i in range(len(word)):
