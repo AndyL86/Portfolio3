@@ -175,9 +175,9 @@ def play():
                     progressEnd = progress[i+1:]
                     progress = progressStart + userInput + progressEnd
         elif len(userInput) > 1:
-            print(f'Oops {userInput} is not a valid guess, only 1 letter at a time')
+            print(f'{userInput} is not a valid guess, guess only 1 letter')
         elif not userInput.isalpha():
-            print(f'Oops {userInput} is not a valid guess, please guess a letter')
+            print(f'{userInput} is not a valid guess, guess only letters')
         else:
             print(f'The letter {userInput} is not in the word. Try Again.')
             incorrect += 1
@@ -205,7 +205,6 @@ def restart_game():
             exit()
         else:
             print("Please enter a valid option")
-        
 
 
 def draw_man(incorrect):
@@ -344,7 +343,6 @@ def main(first_run):
     if first_run:
         print(draw_man(0))
         menu_logo()
-    
     getRandomWord()
     play()
 
