@@ -163,15 +163,11 @@ def play():
             restart_game()
             break
         print(progress)
-        print('Guess a letter!')
         print(f'Number of incorrect guesses {incorrect}')
+        print('Guess a letter!')
         userInput = input()
         if userInput not in letters:
             letters.append(userInput)
-            if len(userInput) > 1:
-                raise ValueError(f'You can only guess 1 letter at a time, you guessed')
-            elif not userInput.isalpha():
-                raise ValueError(f'You can only guess letters, you guessed {(userInput)}')
         if userInput in word:
             print(f'The letter {userInput} is in the word.')
             for i in range(len(word)):
@@ -179,6 +175,10 @@ def play():
                     progressStart = progress[0:i]
                     progressEnd = progress[i+1:]
                     progress = progressStart + userInput + progressEnd
+        elif len(userInput) > 1:
+            print(f"You can only guess 1 letter at a time")
+        elif not userInput.isalpha():
+            print(f"You can only guess letters, you guessed {(userInput)}")
         else:
             print(f'The letter {userInput} is not in the word. Try Again.')
             incorrect += 1
