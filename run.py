@@ -1,5 +1,4 @@
 from random import randint
-from os import system
 
 
 def menu_logo():
@@ -150,7 +149,7 @@ def play():
             if i != len(letters) and i != 0:
                 letterString += ', '
             letterString += letters[i]
-        print(drawMan(incorrect))
+        print(draw_man(incorrect))
         print(f'Letters used: {letterString}')
         if progress == word:
             print(progress)
@@ -176,9 +175,9 @@ def play():
                     progressEnd = progress[i+1:]
                     progress = progressStart + userInput + progressEnd
         elif len(userInput) > 1:
-            print(f"Please try again, you can only guess 1 letter at a time")
+            print('Please try again, you can only guess 1 letter at a time')
         elif not userInput.isalpha():
-            print(f"Please try again, you cannot guess numbers")
+            print('Please try again, you cannot guess numbers')
         else:
             print(f'The letter {userInput} is not in the word. Try Again.')
             incorrect += 1
@@ -209,7 +208,7 @@ def restart_game():
         
 
 
-def drawMan(incorrect):
+def draw_man(incorrect):
     """
     Draws hangman gallow and stick figure in increments
     up to 8 until a complete hangman is drawn
@@ -329,7 +328,6 @@ def user_loses():
     You Lost logo displayed when player loses game
     """
     print("""
-
  _     _  _____  _   _     _      _____  ___   _____
 ( )   ( )(  _  )( ) ( )   ( )    (  _  )(  _`\(_   _)
 `\`\_/'/'| ( ) || | | |   | |    | ( ) || (_(_) | |
@@ -344,7 +342,7 @@ def main(first_run):
     Runs the game
     """
     if first_run:
-        print(drawMan(0))
+        print(draw_man(0))
         menu_logo()
     
     getRandomWord()
