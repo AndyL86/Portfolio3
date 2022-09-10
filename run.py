@@ -175,9 +175,9 @@ def play():
                     progressEnd = progress[i+1:]
                     progress = progressStart + userInput + progressEnd
         elif len(userInput) > 1:
-            print('Please try again, you can only guess 1 letter at a time')
+            print('Oops {userInput} is not a valid guess, only 1 letter at a time')
         elif not userInput.isalpha():
-            print('Please try again, you cannot guess numbers')
+            print(f'Oops {userInput} is not a valid guess, please guess a letter')
         else:
             print(f'The letter {userInput} is not in the word. Try Again.')
             incorrect += 1
