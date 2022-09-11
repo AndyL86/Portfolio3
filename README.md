@@ -108,7 +108,10 @@ user to set difficulty menu.
   * Fix - Added set_difficulty() to restart_game() y input code.
 * Bug - Goodbye message not appearing when user inputs n at restart game 
 prompt.
-* Fix - missing print in restart_game().
+  * Fix - missing print in restart_game().
+* Bug - 'None' displaying in terminal under You Won or You Lost message when
+called.
+  * Fix - Change print() to return()
 ### **Unfixed Bugs**
 
 ## **Validators**
