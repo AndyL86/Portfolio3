@@ -64,15 +64,15 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
  * A graphic is displayed to declare the player has won or lost the game. 
  * Users can choose whether to restart the game or exit the game.
 
-![You Won!] 
+![You Won!](docs/read-me/you-won.png)
 
-![You Lost!] 
+![You Lost!](docs/read-me/you-lost.png)
 
 * Invalid inputs
   * For all user inputs, checks are run to ensure there are no invalid inputs submitted.
   * For any invalid submissions, a tailored error message is displayed and the user is prompted to input their selection again.
 
-![Invalid input] 
+![Invalid input](docs/read-me/invalid.png)
 
 ### **Features Left to Implement**
 * Add a scoring system and leaderboard so players can keep track of their winning streaks.
@@ -111,9 +111,9 @@ prompt.
   * Fix - missing print in restart_game().
 * Bug - 'None' displaying in terminal under You Won or You Lost message when
 called.
-  * Fix - Change print() to return()
+  * Fix - Change print() to return() on You Won and You Lost function.
 ### **Unfixed Bugs**
-
+* No bugs currently identified.
 ## **Validators**
 * PEP8
   * No errors were returned from (http://pep8online.com/).
