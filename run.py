@@ -1,9 +1,8 @@
 from random import randint
 
 class font_colour:
-    BLUE = '\033[38;5;159m'
-    GREEN = '\033[92m'
     RED = '\033[91m'
+    GREEN = '\033[92m'
     WHITE = '\033[0m'
 
 def menu_logo():
@@ -31,8 +30,7 @@ def menu_logo():
     while True:
         answer = input()
         if answer.lower() == 'y':
-            rules()
-            break
+            return rules()
         elif answer.lower() == 'n':
             print("""
  ..|'''.|                       '||  '||
@@ -68,8 +66,7 @@ def rules():
     while True:
         answer = input()
         if answer.lower() == 'y':
-            set_difficulty()
-            break
+            return set_difficulty()
         elif answer.lower() == 'n':
             print("""
  ..|'''.|                       '||  '||
@@ -81,7 +78,6 @@ def rules():
                                                ''
         """)
             exit()
-            break
         else:
             print("Please enter a valid option")
 
@@ -108,25 +104,19 @@ def set_difficulty():
             difficulty = True
             letter_count = 4
             return letter_count
-            play()
-            break
         elif options == "2":
             difficulty = True
             letter_count = 6
             return letter_count
-            play()
-            break
         elif options == "3":
             difficulty = True
             letter_count = 8
             return letter_count
-            play()
-            break
         else:
             print("\n Please select 1, 2 or 3 to make your choice")
 
 
-def getRandomWord():
+def get_random(difficulty):
     """
     Picks a random word to be used for the players guess from the
     answers.txt file
@@ -134,15 +124,21 @@ def getRandomWord():
     wordFile = open('answers.txt', 'r')
     words = wordFile.readlines()
     wordFile.close()
-    return words[randint(0, len(words)-1)][0:-1]
+
+    return_list = []
+    for word in words:
+        if len(word) == difficulty + 1:
+            return_list.append(word)
+
+    return return_list[randint(0, len(return_list)-1)][0:-1]
 
 
-def play():
+def play(difficulty):
     """
     Play the game. Incorrect letters draw out the hangman
     until the image is complete and it is game over.
     """
-    word = getRandomWord()
+    word = get_random(difficulty)
     progress = ''
     for i in range(len(word)):
         progress += '_'
@@ -169,26 +165,30 @@ def play():
         print(progress)
         print(f'Number of incorrect guesses {incorrect}')
         print('Guess a letter!')
-        userInput = input()
-        if userInput not in letters:
-            letters.append(userInput)
-        if userInput in word:
-            print(f'The letter {userInput} is in the word.')
+        user_input = input()
+        if user_input not in letters and validate_guess(user_input):
+            letters.append(user_input)
+        if user_input in word:
+            print(f'The letter {user_input} is in the word.')
             for i in range(len(word)):
-                if userInput == word[i]:
+                if user_input == word[i]:
                     progressStart = progress[0:i]
                     progressEnd = progress[i+1:]
-                    progress = progressStart + userInput + progressEnd
-        elif len(userInput) > 1:
-            print(f'{userInput} is not a valid guess, guess only 1 letter'
+                    progress = progressStart + user_input + progressEnd
+        elif validate_guess(user_input) is False:
+            print(f'{user_input} is not a valid guess, guess only 1 letter'
             ' at a time, Please try again')
-        elif not userInput.isalpha():
-            print(f'{userInput} is not a valid guess, you can only guess'
-            ' letters, Please try again')
+
         else:
-            print(f'The letter {userInput} is not in the word. Try Again.')
+            print(f'The letter {user_input} is not in the word. Try Again.')
             incorrect += 1
 
+
+def validate_guess(guess):
+    if len(guess) == 1 and guess.isalpha():
+        return True
+    else:
+        return False
 
 def restart_game():
     """
@@ -347,11 +347,11 @@ def main(first_run):
     """
     Runs the game
     """
+    difficulty = 6
     if first_run:
         print(draw_man(0))
-        menu_logo()
-    getRandomWord()
-    play()
+    difficulty = menu_logo()
+    play(difficulty)
 
 
 main(True)
