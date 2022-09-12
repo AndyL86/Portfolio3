@@ -74,6 +74,15 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Invalid input](docs/read-me/invalid.png)
 
+* Colour Pallette used for better user experience
+  * Green for user inputs and correct guesses
+  * Red for invalid inputs and incorrect guesses
+
+![Colour Pallette](docs/read-me/green-input.png)
+![Colour Pallette](docs/read-me/green-word.png)
+![Colour Pallette](docs/read-me/red-input.png)
+![Colour Pallette](docs/read-me/red-word.png)
+
 ### **Features Left to Implement**
 * Add a scoring system and leaderboard so players can keep track of their winning streaks.
 * Add a countdown timer which varies depending on the difficulty level selected, the harder the level the shorter the countdown timer.
