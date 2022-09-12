@@ -1,9 +1,11 @@
 from random import randint
 
+
 class font_colour:
     RED = '\033[91m'
     GREEN = '\033[92m'
     WHITE = '\033[0m'
+
 
 def menu_logo():
     """
@@ -26,8 +28,8 @@ def menu_logo():
         |\\
         ========
         """)
-    print("Would you like to play hangman?" + font_colour.GREEN + ' (y)es or (n)o:' 
-    + font_colour.WHITE)
+    print("Would you like to play hangman?" + font_colour.GREEN +
+          ' (y)es or (n)o:' + font_colour.WHITE)
     while True:
         answer = input()
         if answer.lower() == 'y':
@@ -44,7 +46,8 @@ def menu_logo():
             """)
             exit()
         else:
-            print(font_colour.RED + "Please enter a valid option" + font_colour.WHITE)
+            print(font_colour.RED + "Please enter a valid option" +
+                  font_colour.WHITE)
 
 
 def rules():
@@ -63,7 +66,8 @@ def rules():
     If your guess is incorrect, the hangman gallows will build up.
     You have 8 guesses.
     """)
-    print('Do you want to continue?' + font_colour.GREEN + ' (y)es or (n)o:' + font_colour.WHITE)
+    print('Do you want to continue?' + font_colour.GREEN +
+          ' (y)es or (n)o:' + font_colour.WHITE)
     while True:
         answer = input()
         if answer.lower() == 'y':
@@ -80,7 +84,8 @@ def rules():
         """)
             exit()
         else:
-            print(font_colour.RED + "Please enter a valid option" + font_colour.WHITE)
+            print(font_colour.RED + "Please enter a valid option" +
+                  font_colour.WHITE)
 
 
 def set_difficulty():
@@ -89,12 +94,12 @@ def set_difficulty():
     """
     print("\n")
     print(" Select your difficulty level:\n")
-    print(font_colour.GREEN + " Press 1" + font_colour.WHITE + 
-    " for Level 1 - 4 letter word")
-    print(font_colour.GREEN + " Press 2" + font_colour.WHITE + 
-    " for Level 2 - 6 letter word")
-    print(font_colour.GREEN + " Press 3" + font_colour.WHITE + 
-    " for Level 3 - 8 letter word")
+    print(font_colour.GREEN + " Press 1" + font_colour.WHITE +
+          " for Level 1 - 4 letter word")
+    print(font_colour.GREEN + " Press 2" + font_colour.WHITE +
+          " for Level 2 - 6 letter word")
+    print(font_colour.GREEN + " Press 3" + font_colour.WHITE +
+          " for Level 3 - 8 letter word")
     difficulty = False
     while not difficulty:
         options = input("\n ").upper()
@@ -167,20 +172,20 @@ def play(difficulty):
         if user_input not in letters and validate_guess(user_input):
             letters.append(user_input)
         if user_input in word:
-            print(font_colour.GREEN + f'The letter {user_input} is in the word.'
-            + font_colour.WHITE)
+            print(font_colour.GREEN + f'The letter {user_input} is in the'
+                  ' word.' + font_colour.WHITE)
             for i in range(len(word)):
                 if user_input == word[i]:
                     progressStart = progress[0:i]
                     progressEnd = progress[i+1:]
                     progress = progressStart + user_input + progressEnd
         elif validate_guess(user_input) is False:
-            print(font_colour.RED + f'{user_input} is not a valid guess, Please try again'
-            + font_colour.WHITE)
+            print(font_colour.RED + f'{user_input} is not a valid guess,'
+                  'Please try again' + font_colour.WHITE)
 
         else:
-            print(font_colour.RED + f'The letter {user_input} is not in the word.'
-            ' Please try Again.' + font_colour.WHITE)
+            print(font_colour.RED + f'The letter {user_input} is not in the'
+                  ' word. Please try Again.' + font_colour.WHITE)
             incorrect += 1
 
 
@@ -194,13 +199,14 @@ def validate_guess(guess):
     else:
         return False
 
+
 def restart_game():
     """
     When game ends user to choose to restart the game or exit
     """
     while True:
-        choice = input("Would you like to play again?" + font_colour.GREEN + 
-        ' (y)es or (n)o:' + font_colour.WHITE)
+        choice = input("Would you like to play again?" + font_colour.GREEN +
+                       ' (y)es or (n)o:' + font_colour.WHITE)
         if choice == "y":
             main(False)
         elif choice == "n":
@@ -215,8 +221,8 @@ def restart_game():
         """)
             exit()
         else:
-            print(font_colour.RED + "Please enter a valid option"
-             + font_colour.WHITE)
+            print(font_colour.RED + "Please enter a valid option" +
+                  font_colour.WHITE)
 
 
 def draw_man(incorrect):
