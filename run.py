@@ -26,7 +26,8 @@ def menu_logo():
         |\\
         ========
         """)
-    print("Would you like to play hangman?" + font_colour.GREEN + ' (y)es or (n)o:' + font_colour.WHITE)
+    print("Would you like to play hangman?" + font_colour.GREEN + ' (y)es or (n)o:' 
+    + font_colour.WHITE)
     while True:
         answer = input()
         if answer.lower() == 'y':
@@ -43,7 +44,7 @@ def menu_logo():
             """)
             exit()
         else:
-            print("Please enter a valid option")
+            print(font_colour.RED + "Please enter a valid option" + font_colour.WHITE)
 
 
 def rules():
@@ -79,7 +80,7 @@ def rules():
         """)
             exit()
         else:
-            print("Please enter a valid option")
+            print(font_colour.RED + "Please enter a valid option" + font_colour.WHITE)
 
 
 def set_difficulty():
@@ -87,16 +88,13 @@ def set_difficulty():
     Asks player to set difficulty
     """
     print("\n")
-    print(" Select your difficulty level\n")
-    print(
-        " Press 1 for Level 1, 4 letter word"
-        )
-    print(
-        " Press 2 for Level 2, 6 letter word"
-        )
-    print(
-        " Press 3 for Level 3, 8 letter word"
-        )
+    print(" Select your difficulty level:\n")
+    print(font_colour.GREEN + " Press 1" + font_colour.WHITE + 
+    " for Level 1 - 4 letter word")
+    print(font_colour.GREEN + " Press 2" + font_colour.WHITE + 
+    " for Level 2 - 6 letter word")
+    print(font_colour.GREEN + " Press 3" + font_colour.WHITE + 
+    " for Level 3 - 8 letter word")
     difficulty = False
     while not difficulty:
         options = input("\n ").upper()
@@ -169,21 +167,28 @@ def play(difficulty):
         if user_input not in letters and validate_guess(user_input):
             letters.append(user_input)
         if user_input in word:
-            print(f'The letter {user_input} is in the word.')
+            print(font_colour.GREEN + f'The letter {user_input} is in the word.'
+            + font_colour.WHITE)
             for i in range(len(word)):
                 if user_input == word[i]:
                     progressStart = progress[0:i]
                     progressEnd = progress[i+1:]
                     progress = progressStart + user_input + progressEnd
         elif validate_guess(user_input) is False:
-            print(f'{user_input} is not a valid guess, Please try again')
+            print(font_colour.RED + f'{user_input} is not a valid guess, Please try again'
+            + font_colour.WHITE)
 
         else:
-            print(f'The letter {user_input} is not in the word. Try Again.')
+            print(font_colour.RED + f'The letter {user_input} is not in the word.'
+            ' Please try Again.' + font_colour.WHITE)
             incorrect += 1
 
 
 def validate_guess(guess):
+    """
+    Checks if user has inputted a number, symbol or more than 1 letter
+    and returns an error message
+    """
     if len(guess) == 1 and guess.isalpha():
         return True
     else:
@@ -194,7 +199,8 @@ def restart_game():
     When game ends user to choose to restart the game or exit
     """
     while True:
-        choice = input("Would you like to play again?  (y)es or (n)o:\n")
+        choice = input("Would you like to play again?" + font_colour.GREEN + 
+        ' (y)es or (n)o:' + font_colour.WHITE)
         if choice == "y":
             main(False)
         elif choice == "n":
@@ -209,7 +215,8 @@ def restart_game():
         """)
             exit()
         else:
-            print("Please enter a valid option")
+            print(font_colour.RED + "Please enter a valid option"
+             + font_colour.WHITE)
 
 
 def draw_man(incorrect):
