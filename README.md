@@ -73,8 +73,6 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
   * For any invalid submissions, a tailored error message is displayed and the user is prompted to input their selection again.
 
 ![Invalid input](docs/read-me/invalid.png)
-![Invalid Number input](docs/read-me/invalid-number.png)
-![Invalid Double input](docs/read-me/invalid-double.png)
 
 ### **Features Left to Implement**
 * Add a scoring system and leaderboard so players can keep track of their winning streaks.
