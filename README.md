@@ -142,6 +142,7 @@ The project was deployed using Code Institutes mock terminal for Heroku.
  * Desi Quintans for the list of random english words as a downloadable file. - [Random Word Generator](http://www.desiquintans.com/nounlist)
  * YouTube channel StudentEngineer for the inspiration on how to build a hangman game in Python. However, as much as I have introduced my own style to the project, there may be instances where some of the code is similar. - [Python Hang Man tutorial](https://www.youtube.com/watch?v=TWLD2OKmSCQ)
 * Patorjk for the word art used in the game menu, rules, gameover and you won/lost screens. - [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Nancyj-Underlined&t=Hello%20there)
+* GO Colors for the color pallette. - [GO colors](https://pkg.go.dev/github.com/whitedevops/colors)
 
  ### **Acknowledgments**
 * Richard Wells (https://github.com/D0nni387) - Code Institute mentor, without his patience and support I would not have been able to complete my project to a standard that I am happy with
