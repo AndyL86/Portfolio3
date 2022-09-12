@@ -1,5 +1,10 @@
 from random import randint
 
+class font_colour:
+    BLUE = '\033[38;5;159m'
+    GREEN = '\033[92m'
+    RED = '\033[91m'
+    WHITE = '\033[0m'
 
 def menu_logo():
     """
@@ -22,7 +27,7 @@ def menu_logo():
         |\\
         ========
         """)
-    print('Would you like to play hangman? (y)es or (n)o')
+    print("Would you like to play hangman?" + font_colour.GREEN + ' (y)es or (n)o:' + font_colour.WHITE)
     while True:
         answer = input()
         if answer.lower() == 'y':
@@ -59,7 +64,7 @@ def rules():
     If your guess is incorrect, the hangman gallows will build up.
     You have 8 guesses.
     """)
-    print('Do you want to continue?  (y)es or (n)o:')
+    print('Do you want to continue?' + font_colour.GREEN + ' (y)es or (n)o:' + font_colour.WHITE)
     while True:
         answer = input()
         if answer.lower() == 'y':
