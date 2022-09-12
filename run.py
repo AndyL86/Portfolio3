@@ -176,8 +176,7 @@ def play(difficulty):
                     progressEnd = progress[i+1:]
                     progress = progressStart + user_input + progressEnd
         elif validate_guess(user_input) is False:
-            print(f'{user_input} is not a valid guess, guess only 1 letter'
-            ' at a time, Please try again')
+            print(f'{user_input} is not a valid guess, Please try again')
 
         else:
             print(f'The letter {user_input} is not in the word. Try Again.')
@@ -197,7 +196,6 @@ def restart_game():
     while True:
         choice = input("Would you like to play again?  (y)es or (n)o:\n")
         if choice == "y":
-            set_difficulty()
             main(False)
         elif choice == "n":
             print("""
