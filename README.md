@@ -32,19 +32,20 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
  ### **Existing Features**
 * Game Menu
-  * Can select to start game to progress to rules menu or exit the game.
+  * The user can select to start thengame to progress to rules menu or exit the game. This gives the user the chance to easily exit the game without having to play through until game over or closing the game completely.
 
 ![Main menu](docs/read-me/main-menu.png)
 
 * Rules Menu
-  * Can confirm to continue to set difficulty menu or exit the game.
+  * The rules menu details to the user how the game is played, the user can then choose whether to progress to the set difficulty menu or exit the game.
 
 ![Rules menu](docs/read-me/rules-menu.png)
 
 * Set Difficulty
-  * Level 1 = 4 letter word
-  * Level 2 = 6 letter word
-  * Level 3 = 8 letter word
+  * This is the final menu before the gameplay starts and allows the user to select the length of the word they wish to guess: 
+    * Level 1 = 4 letter word
+    * Level 2 = 6 letter word
+    * Level 3 = 8 letter word
 
 ![Set difficulty menu](docs/read-me/set-difficulty.png)
 
@@ -55,28 +56,29 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 * Incorrect guesses with graphical representation
    * The user has 8 incorrect guesses before it is game over.
-   * This is visible during gameplay
-   * The hangman gallows is built incrementally with each incorrect guess.
+   * This is visible during gameplay allowing the user to fully understand the game progress.
+   * The hangman gallows is built incrementally with each incorrect guess which means the user can visualise each step taken to build the gallows.
 
 ![Ammount of incorrect guesses](docs/read-me/gameplay.png)
 
 * Win and Lose screens
- * A graphic is displayed to declare the player has won or lost the game. 
- * Users can choose whether to restart the game or exit the game.
+ * A graphic is displayed to declare the if the user has won or lost the game. 
+ * Users can choose whether to restart the game or exit the game. Restarting the game takes the user back to the main menu as to allow another chance to read the instructions if required and select a new difficulty level.
 
 ![You Won!](docs/read-me/you-won.png)
 
 ![You Lost!](docs/read-me/you-lost.png)
 
 * Invalid inputs
-  * For all user inputs, checks are run to ensure there are no invalid inputs submitted.
-  * For any invalid submissions, a tailored error message is displayed and the user is prompted to input their selection again.
+  * For all user inputs, checks are run to ensure there are no invalid inputs submitted. This means any guess that is a symbol, number or more than 1 letter will not be registered as a guess and will prompt the user to guess again.
+  * Invalid input notifications have been added to all areas of the game that require a specific user input as to ensure a positive user experience.
 
 ![Invalid input](docs/read-me/invalid.png)
 
-* Colour Pallette used for better user experience
-  * Green for user inputs and correct guesses
-  * Red for invalid inputs and incorrect guesses
+* Colour Pallette
+  * Provides an easier, more user friendly experience as input prompts are highlighted for better visibility and error messages are more recogniseable.
+  * Green has been selected for user input prompts and correct guess messages.
+  * Red has been selected for invalid input message alerts and incorrect guess messages.
 
 ![Colour Pallette](docs/read-me/green-input.png)
 ![Colour Pallette](docs/read-me/green-word.png)
@@ -93,6 +95,11 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 * Error message prompts were checked through the use of variants of incorrect user inputs
 * Tests were conducted in the local terminal as well as on the deployed site via the mock terminal on Heroku.
 
+Implementation
+Test
+Result
+Verdict
+
 ## **Technology Used**
 * Languages
   * Python
@@ -108,21 +115,23 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
   * Fix - Removed unnecessary level_select = set_difficulty() function call.
 * Bug - Gameplay starting when user input 'n' to exit game on Rules menu prompt.
   * Fix - Exit() added to if statement in the rules() function.
-* Bug - UserInput print statement not printing to terminal.
+* Bug - user_input print statement not printing to terminal.
   * Fix - Removed unecessary _ = system('clear') from while loop.
 * Bug - Restart function accepting any letter input for exit game.
-  * Fix - Extended if else statement to if elif else for stricter user input.
+  * Fix - Extended if else statement to if elif else for stricter user input validation.
 * Bug - Restart game y input starting gameplay instead of taking 
-user to set difficulty menu.
-  * Fix - Added set_difficulty() to restart_game() y input code.
+user to main menu.
+  * Fix - Added main(False) to restart_game() y input code.
 * Bug - Goodbye message not appearing when user inputs n at restart game 
 prompt.
   * Fix - missing print in restart_game().
 * Bug - 'None' displaying in terminal under You Won or You Lost message when
 called.
   * Fix - Change print() to return() on You Won and You Lost function.
+
 ### **Unfixed Bugs**
 * No bugs currently identified.
+
 ## **Validators**
 * PEP8
   * No errors were returned from (http://pep8online.com/).
@@ -140,9 +149,9 @@ The project was deployed using Code Institutes mock terminal for Heroku.
   * Still in the settings, create a Config Var called PORT, set this to 8000.
   * If you have credentials you must enter another Config Var called CREDS
   and paste in the contents of the JSON file.
-  * Click 'Deploy' and choose your preferred deployment method and your 
-  repository.
-  * Click 'connect' on your repository.
+  * Click 'Deploy' and choose your preferred deployment method and enter your 
+  repository name to search.
+  * Click 'connect' on your repository when it is displayed.
   * Your site will now be deployed on Heroku.
 
 
