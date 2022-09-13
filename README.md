@@ -28,6 +28,16 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
  * As a user, I want clearly readable instructions on how the game works.
  * As a user, I want the game to provide a level of challenge without being too difficult.
 
+### **Flowchart**
+To help me plan how the game would function I drew out a basic flowchart which detailed each step of the development process I needed to take. This was a helpful guide when developing the game as it allowed me a structure to follow to acehieve my end result.
+  * When and what inputs would be needed from the user?
+  * What will happen when a user enters an invalid input?
+  * How would the game respond when a user enters an incorrect guess?
+  * How much interaction does the user have with the game environment?
+  * Are there any outcomes that would cause the game loop to break unintentionally?
+
+![Flowchart](docs/read-me/flowchart.png)
+
  ## **Features**
 
  ### **Existing Features**
