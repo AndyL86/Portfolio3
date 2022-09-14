@@ -168,7 +168,7 @@ The project was deployed using Code Institutes mock terminal for Heroku.
     2. heroku/nodejs
   * Still in the settings, create a Config Var called PORT, set this to 8000.
   * If you have credentials you must enter another Config Var called CREDS
-  and paste in the contents of the JSON file.
+  and paste in the contents of the JSON file from the repository.
   * Click 'Deploy' and choose your preferred deployment method and enter your 
   repository name to search.
   * Click 'connect' on your repository when it is displayed.
