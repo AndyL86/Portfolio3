@@ -101,15 +101,25 @@ To help me plan how the game would function I drew out a basic flowchart which d
 * Allow players to guess a whole word if they think they know the answer, if guessed incorrectly the player loses despite number of guesses that are left.
 
 ## **Testing**
-* I conducted manual testing through the use of a PEP8 Linter (http://pep8online.com/) and corrected any errors that were identified.
-* Error message prompts were checked through the use of variants of incorrect user inputs
-* Tests were conducted in the local terminal as well as on the deployed site via the mock terminal on Heroku.
 
-Implementation
-Test
-Result
-Verdict
+#### **Python standards Testing** 
+  * Implementation - Standards testing was conducted via the PEP8 Linter (http://pep8online.com/)
+  * Test - To carry out this test I copied my code into the PEP8 Linter and clicked 'Check code'. 
+  * Result - A number of formatting errors were identified which, although, did not effect the functionality of my code these errors did not conform Python best practice standards. Once these errors were identified I set about making the appropriate changes.
+  * Verdict - With the errors in my code format corrected I ran my code back through the PEP8 Linter and no further errors were highlighted. This test was passed.
+  
+#### **Invalid input Testing**
+  * Implementation - Invalid input testing was conducted by myself in the local Code Institute terminal using the python3 run.py server to run my code.
+  * Test - To carry out this test I used a wide variety of invalid inputs on each user input prompt.
+  * Result - A small number of invalid input errors were identified which were noted as fixed bugs.
+  * Verdict - With a small number of changes to my code this test was passed.
 
+#### **Gameplay Functionality Testing**
+  * Implementation - For this test I deployed my site on Heroku (see Deployment steps below).
+  * Test - This test was carried out by my friends, family and select peers. Each individual was instructed to play the game with the intention to 'break' the game and feedback their thoughts on the games functionality.
+  * Result - After vigorous testing there were no errors identified with the game functionality. Each user provided positive feedback on the rules of the game and the ease of play.
+  * Verdict - This test was passed successfully.
+  
 ## **Technology Used**
 * Languages
   * Python
