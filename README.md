@@ -174,6 +174,12 @@ The project was deployed using Code Institutes mock terminal for Heroku.
   * Click 'connect' on your repository when it is displayed.
   * Your site will now be deployed on Heroku.
 
+* Steps to deploy locally:
+  * Clone this repository.
+  * Install python on the local machine.
+  * Navigate to the run.py folder inside the terminal.
+  * Enter the command 'python3 run.py' and press enter.
+
 
 ## **Credits**
  * Code Institute for the mock deployment terminal. - [Code Institute](https://codeinstitute.net/)
